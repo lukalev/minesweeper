@@ -1,0 +1,39 @@
+#app {
+    text-align: center;
+}
+.app-wrapper {
+    display:inline-block;
+}
+.app-center {
+    display: inline-block;
+}
+.app-right {
+    display: inline-block;
+    position: absolute;
+    margin-left: 30px;
+}
+.app-header {
+    background-color: #a2a2a2;
+    height: 150px;
+    padding: 40px 0 10px 0;
+    color: #424242;
+}
+.app-title {
+    font-size: 1.5em;
+    margin: 10px;
+}
+.app-intro {
+    font-size: large;
+    padding: 15px 0;
+}
+#app input {
+    width: 40px;
+}
+.app-logo {
+    animation: app-logo-spin infinite 20s linear;
+    height: 80px;
+}
+@keyframes app-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

@@ -1,0 +1,32 @@
+#grid .btn {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-weight: 700;
+    vertical-align: middle;
+}
+#grid .btn:focus {
+    outline: 0;
+}
+#grid .btn:disabled {
+    cursor: default;
+    border-color: #fff;
+    border-style: solid;
+}
+#grid .btn.explode {
+    background-image: url('mine.png');
+    background-size: 25px;
+    background-position: center;
+    background-color: transparent;
+    background-repeat: no-repeat;
+}
+#grid .btn.pin {
+    background-image: url('pin.png');
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-color: #fff;
+}
+#grid table {
+    margin: 0 auto;
+}

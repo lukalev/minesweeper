@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\actions",
+    "\\src\\components",
+    "\\src\\components\\app",
+    "\\src\\components\\grid",
+    "\\src\\components\\scores",
+    "\\src\\constants",
+    "\\src\\models",
+    "\\src\\reducers"
+  ],
+  "SelectedNode": "\\src\\reducers\\score.js",
+  "PreviewInSolutionExplorer": false
+}

@@ -1,0 +1,28 @@
+{
+  "name": "minesweeper",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "firebase": "^5.5.0",
+    "gh-pages": "^2.0.1",
+    "react": "^16.4.2",
+    "react-bootstrap": "^0.32.4",
+    "react-dom": "^16.4.2",
+    "react-notify-toast": "^0.5.0",
+    "react-redux": "^5.0.7",
+    "react-router": "^3.2.1",
+    "react-scripts": "1.1.5",
+    "react-thunk": "^1.0.0",
+    "redux": "^4.0.0",
+    "redux-thunk": "^2.3.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "homepage": "https://lukalev.github.io/minesweeper"
+  }
+}
