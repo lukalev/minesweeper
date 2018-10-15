@@ -24,7 +24,7 @@ class Scores extends Component {
               <ScoresList scores={this.props.scores} />
               <form onSubmit={this.onSubmit}>
                   <input ref="score-name" /><br/>                  
-                  <button>Add new score</button>
+                  <button disabled={!this.props.won}>Add new score</button>
               </form>
           </div>
       );

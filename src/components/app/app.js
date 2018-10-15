@@ -17,6 +17,7 @@ class App extends Component {
             minesNumber: 4,
             timer: false,
             scores: false,
+            won: false,
             time:0
         };
     }
@@ -55,8 +56,8 @@ class App extends Component {
     handleStartTimer = () => {
         this.setState({ ...this.state, timer: true });
     }
-    handleStopTimer = () => {
-        this.setState({ ...this.state, timer: false, scores: true }); 
+    handleStopTimer = (win) => {
+        this.setState({ ...this.state, timer: false, scores: true, won : win }); 
     }
     saveTime = (time) => {
         this.setState({ ...this.state, time: time }); 
@@ -86,7 +87,7 @@ class App extends Component {
                         <Grid width={this.state.width} height={this.state.height} minesNumber={this.state.minesNumber} onStart={this.handleStartTimer} onStop={this.handleStopTimer}/>
                     </div>
                     <div className="app-right">
-                        {this.state.scores ? <Scores time={this.state.time}/> : null}
+                        {this.state.scores ? <Scores time={this.state.time} won={this.state.won}/> : null}
                     </div>
                 </div>
             </div>

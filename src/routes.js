@@ -4,6 +4,6 @@ import React from 'react';
 
 export default (props) => (
     <Router {...props}>
-        <Route path={process.env.PUBLIC_URL + '/'} component={App} />        
+        <Route path='/' component={App} />        
     </Router>
 )

@@ -1,8 +1,8 @@
 {
   "name": "minesweeper",
   "version": "0.1.0",
-  "private": true,
-  "homepage":"https://lukalev.github.io",
+  "private": false,
+  "homepage":"https://github.com/lukalev/minesweeper",
   "dependencies": {
     "firebase": "^5.5.0",
     "gh-pages": "^2.0.1",

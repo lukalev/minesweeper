@@ -102,10 +102,8 @@ class Grid extends Component {
             allFields += this.state.array[i].filter(function (el) { return (el !== null && el !== '*') }).length;
         if (allFields === clickedFields) {
             notify.show('Game completed!', 'custom', NOTIFY_INTERVAL, { background: '#dff0d8', text: '#3c763d' });
-            this.stopTimer();
-            return true;
+            this.stopTimer(true);
         }
-        return false;
     }
     gameOver(playArray) {
         //expand all fields
@@ -113,15 +111,15 @@ class Grid extends Component {
             for (let j = 0; j < this.props.width; j++)
                 playArray[i][j] = this.state.array[i][j];
         notify.show('Game over!', 'custom', NOTIFY_INTERVAL, { background: '#ebccd1', text: '#a94442' });
-        this.stopTimer();
+        this.stopTimer(false);
     }
     startTimer() {
         this.startTimer = function () { }; // empty function don't call it anymore
         this.props.onStart();
     }
-    stopTimer() {
+    stopTimer(win) {
         //this.startTimer = function () { }; // empty function don't call it anymore
-        this.props.onStop();
+        this.props.onStop(win);
     }
     handleClick = (e, i, j) => {    
         let state = this.state;
