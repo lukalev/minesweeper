@@ -36,7 +36,9 @@
 .timer {
     margin:15px 0 0 0;
 }
-.info li {padding: 5px 0}
+.info li {
+    padding: 5px 0
+}
 @keyframes app-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
