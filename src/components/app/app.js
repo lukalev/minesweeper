@@ -18,7 +18,8 @@ class App extends Component {
             timer: false,
             scores: false,
             won: false,
-            time:0
+            time: 0,
+            refresh: false,
         };
     }
     formIsValid(minesNumber, width, height) {
@@ -38,7 +39,7 @@ class App extends Component {
         return valid;
     }    
     handleChange = (e) => {
-        let name = e.target.name, val = e.target.value;
+        const name = e.target.name, val = e.target.value;
         let minesNumber = this.state.minesNumber, width = this.state.width, height = this.state.height;
         if (e.target.name === 'minesNumber')
             minesNumber = val;
@@ -48,9 +49,9 @@ class App extends Component {
             height = val;
         if (this.formIsValid(minesNumber, width, height))
         {
-            let state = this.state;
+            const state = this.state;
             state[name] = parseInt(val);
-            this.setState(state);            
+            this.setState(state);
         }
     }
     handleStartTimer = () => {
@@ -62,13 +63,18 @@ class App extends Component {
     saveTime = (time) => {
         this.setState({ ...this.state, time: time }); 
     }
+    restart = () => {
+        const state = this.state;
+        state.refresh = !state.refresh;
+        this.setState(state);
+    }
     render() {
         return (
             <div id="app">
                 <Notifications />
                 <header className="app-header">
                     <img src={logo} className="app-logo" alt="logo" />
-                    <h1 className="app-title">Minesweeper</h1>
+                    <h1 className="app-title">Minesweeper by Luka</h1>
                 </header>
                 <div className="app-intro">
                     <div className="app-wrapper">
@@ -77,18 +83,25 @@ class App extends Component {
                                 Deploy <input type="number" name="minesNumber" value={this.state.minesNumber} onChange={(e) => this.handleChange(e)} /> mines in <input type="number" name="width" value={this.state.width} onChange={(e) => this.handleChange(e)} /> x <input type="number" name="height" value={this.state.height} onChange={(e) => this.handleChange(e)} /> field
                             </form>
                         </div>
-                        <div className="app-right">
+                        <div className="timer">
                            <Timer isOn={this.state.timer} saveTime={this.saveTime} />
                         </div>
                     </div>
                 </div>
                 <div className="app-wrapper">
                     <div className="app-center">
-                        <Grid width={this.state.width} height={this.state.height} minesNumber={this.state.minesNumber} onStart={this.handleStartTimer} onStop={this.handleStopTimer}/>
+                        <Grid refresh={this.state.refresh} width={this.state.width} height={this.state.height} minesNumber={this.state.minesNumber} onStart={this.handleStartTimer} onStop={this.handleStopTimer}/>
                     </div>
                     <div className="app-right">
                         {this.state.scores ? <Scores time={this.state.time} won={this.state.won}/> : null}
                     </div>
+                </div>
+                <ul className="info">
+                    <li>i) Use right mouse click to label mines</li>
+                    <li>i) Change number of mines and field to taste</li>
+                </ul>
+                <div>
+                    <button onClick={this.restart}>Restart</button>
                 </div>
             </div>
         );

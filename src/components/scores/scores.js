@@ -22,9 +22,9 @@ class Scores extends Component {
       return (
           <div id="scores">
               <ScoresList scores={this.props.scores} />
-              <form onSubmit={this.onSubmit}>
+              <form onSubmit={this.onSubmit} style={{display: !this.props.won ? "none" : "block"}}>
                   <input ref="score-name" /><br/>                  
-                  <button disabled={!this.props.won}>Add new score</button>
+                  <button>Add new score</button>
               </form>
           </div>
       );

@@ -24,7 +24,7 @@
 }
 .app-intro {
     font-size: large;
-    padding: 15px 0;
+    padding: 20px 0 10px 0;
 }
 #app input {
     width: 40px;
@@ -33,6 +33,10 @@
     animation: app-logo-spin infinite 20s linear;
     height: 80px;
 }
+.timer {
+    margin:15px 0 0 0;
+}
+.info li {padding: 5px 0}
 @keyframes app-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }

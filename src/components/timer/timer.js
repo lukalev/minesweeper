@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { loadScore } from '../../actions/scores';
 
 class Timer extends Component {
+    timer = 0;
     constructor(props) {
         super(props)
         this.state = {
@@ -16,7 +17,7 @@ class Timer extends Component {
             this.startTimer();
         }
     }  
-    startTimer = () => {
+    startTimer = () => {        
         if (this.props.isOn) {
             this.setState({
                 time: this.state.time,

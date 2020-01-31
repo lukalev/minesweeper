@@ -111,7 +111,7 @@ class Grid extends Component {
             for (let j = 0; j < this.props.width; j++)
                 playArray[i][j] = this.state.array[i][j];
         notify.show('Game over!', 'custom', NOTIFY_INTERVAL, { background: '#ebccd1', text: '#a94442' });
-        this.stopTimer(false);
+        //this.stopTimer(false);
     }
     startTimer() {
         this.startTimer = function () { }; // empty function don't call it anymore

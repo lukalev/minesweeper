@@ -7,7 +7,7 @@ export default (props) => {
         <div>
             <h3>Scoreboard</h3>
             <ul>
-                {_.map(props.scores, (score) => <li key={score.id}>{score.name}:{score.score}s</li>)}
+                {_.map(props.scores, (score) => <li key={score.id}>{score.name}: {score.score}s</li>)}
             </ul>
         </div>
         )
