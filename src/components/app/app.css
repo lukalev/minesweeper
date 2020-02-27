@@ -14,13 +14,12 @@
 }
 .app-header {
     background-color: #a2a2a2;
-    height: 150px;
-    padding: 40px 0 10px 0;
+    height: 135px;
+    padding-top: 10px;
     color: #424242;
 }
 .app-title {
     font-size: 1.5em;
-    margin: 10px;
 }
 .app-intro {
     font-size: large;
@@ -36,8 +35,15 @@
 .timer {
     margin:15px 0 0 0;
 }
+ul.info {
+    list-style: none;
+}
 .info li {
     padding: 5px 0
+}
+.reset button {
+    padding-bottom: 30px;
+    font-size: 16px;
 }
 @keyframes app-logo-spin {
   from { transform: rotate(0deg); }

@@ -100,7 +100,7 @@ class App extends Component {
                     <li>i) Use right mouse click to label mines</li>
                     <li>i) Change number of mines and field to taste</li>
                 </ul>
-                <div>
+                <div className="restart">
                     <button onClick={this.restart}>Restart</button>
                 </div>
             </div>
